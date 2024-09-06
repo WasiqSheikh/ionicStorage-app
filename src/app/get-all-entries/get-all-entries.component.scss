@@ -1,0 +1,25 @@
+td, th {
+  padding: 1rem;
+}
+
+.my-custom-class {
+  --width: 80%;
+  --min-width: 300px;
+  --max-width: 500px;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.custom-modal .modal-wrapper {
+  width: var(--width);
+  min-width: var(--min-width);
+  max-width: var(--max-width);
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}

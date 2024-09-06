@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Table Example
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <table [width]="'100%'" border="1">
+            <thead class="text-bold">
+              <tr>
+                <th>username</th>
+                <th>email</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody class="ion-text-center" *ngFor="let entry of getFormDataEntries">
+              <tr>
+                <td>{{entry.username}}</td>
+                <td>{{entry.email}}</td>
+                <td>
+                  <ion-button fill="clear" (click) = "update(entry.id)">
+                    <ion-icon slot="icon-only" name="trash-bin-outline" size="large" color="success"></ion-icon>
+                  </ion-button>
+                  <ion-button fill="clear">
+                    <ion-icon name="pencil-outline" size="large" color="danger"></ion-icon>
+                  </ion-button>
+
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+
+</ion-content>

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Updating {{data.id}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-input type="text" fill="solid" label="Username" labelPlacement="floating" helperText="Enter a username"
+          errorText="Invalid username" [(ngModel)]="data.username"></ion-input>
+      </ion-col>
+      <ion-col size="12"><ion-input type="email" fill="solid" label="Email" labelPlacement="floating"
+          helperText="Enter a valid email" errorText="Invalid email" [(ngModel)]="data.email" email></ion-input></ion-col>
+
+      <ion-col size="12" class="ion-text-end"><ion-button shape="round" fill="outline" color="success"
+          (click)="updateUserDetails()">Update</ion-button></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
